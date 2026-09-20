@@ -43,7 +43,7 @@ int main() {
     waitpid(child2,&status2,0);
     printf("Parent PID:%d after child2 has finished:\n",child2);
     if(WIFEXITED(status2)){
-            int exit_code2=WEXITSTATUS(status1);
+            int exit_code2=WEXITSTATUS(status2);
             if(exit_code2==0){
                     printf("   Normal exit Status:%d\n",exit_code2);
             }
